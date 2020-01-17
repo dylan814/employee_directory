@@ -8,13 +8,13 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	position: relative;
 	color: #4a4a4a;
-	background-color: #fff;
+	background-color: white;
 }
 
 header {
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;	
+	flex-direction: row;	
 }
 
 form {
@@ -166,6 +166,7 @@ h1 {
 	padding:20px 10px;	
 	height:145px;
 	text-decoration: none;
+	background-color: white;
 }
 
 .card:hover {
