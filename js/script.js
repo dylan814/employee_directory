@@ -1,14 +1,14 @@
-// global variables
-let employees = [];
-const urlAPI = "https://randomuser.me/api/?results=12&inc=name, picture, email, location, phone, dob";
-const  gridContainer = document.querySelector("#grid-container");
+
+let employees =[];
+const url = "https://randomuser.me/api/?results=12&inc=name, picture, email, location, phone, dob";
+const gridContainer = document.querySelector("#grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose  = document.querySelector(".modal-close");
 const next = document.querySelector('#right');
 const prev  = document.querySelector('#left');
 
-fetch(urlAPI)
+fetch(url)
 	.then(res => res.json())
 	.then(res => res.results)
 	.then(displayEmployees)
@@ -21,7 +21,7 @@ function displayEmployees(employeeData){
 	//console.log(employees);
 	let employeesHTML = "";
 
-	employees.forEach((employee, index) => {
+	employeeData.forEach((employee, index) => {
 		let name = employee.name;
 		let email = employee.email;
 		let city = employee.location.city;
